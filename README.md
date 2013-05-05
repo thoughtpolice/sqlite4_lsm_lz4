@@ -58,7 +58,7 @@ See [AUTHORS.txt](https://raw.github.com/thoughtpolice/sqlite4_lsm_lz4/master/AU
 
 # License
 
-MIT. See
+BSD2, same as LZ4. See
 [LICENSE.txt](https://raw.github.com/thoughtpolice/sqlite4_lsm_lz4/master/LICENSE.txt)
 for terms of copyright and redistribution.
 
