@@ -12,7 +12,7 @@ under `lsm/sqlite4.c` for any purpose until it is officially released
 by the SQLite developers. I can't be held responsible for your
 mistakes.
 
-The copy of sqlite under `lsm/sqlite4` was generated on May 4th, 2013.
+The copy of sqlite under `lsm/sqlite4.c` was generated on May 4th, 2013.
 
 # Performance and size numbers
 
