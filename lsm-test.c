@@ -55,14 +55,34 @@ int main()
 #endif /* !NDEBUG */
     rc = lsm_insert(db, kbuf, strlen(kbuf), vbuf, strlen(vbuf));
     if (rc != LSM_OK) {
-        fprintf(stderr, "ERROR WRITING KEY 0x%x: '%s' -> '%s', rc = %d\n", i, kbuf, vbuf, rc);
-        exit(-1);
+      fprintf(stderr, "ERROR WRITING KEY 0x%x: '%s' -> '%s', rc = %d\n", i, kbuf, vbuf, rc);
+      exit(-1);
     }
 
     i++; /* Increment index */
   }
 
-  printf("Done\n");
+  /* Get them all back to be sane */
+  printf("Done. Now retrieving keys...\n");
+  lsm_cursor *csr;
+  rc = lsm_csr_open(db, &csr);
+  if (rc != LSM_OK) exit(1);
+
+  for (int j = 0; j < i; j++)
+  {
+    snprintf(kbuf, BUFFER_SIZE, "KEY INPUT 0x%x", j);
+#ifndef NDEBUG
+    printf("retrieve: key = '%s'\n", kbuf);
+#endif /* !NDEBUG */
+    rc = lsm_csr_seek(csr, kbuf, strlen(kbuf), LSM_SEEK_EQ);
+    if (!lsm_csr_valid(csr)) {
+      fprintf(stderr, "ERROR READING KEY 0x%x: '%s', rc = %d\n", j, kbuf, rc);
+      exit(-1);
+    }
+  }
+  lsm_csr_close(csr);
+  printf("Done.\n");
+
   fclose(fp);
   rc = lsm_close(db);
   return 0;

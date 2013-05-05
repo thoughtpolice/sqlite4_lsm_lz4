@@ -25,19 +25,18 @@ $ make
 ...
 $ time ./lsm-test
 Inserting all keys/values (using /usr/share/dict/words)
-Done
-./lsm-test  0.24s user 0.23s system 65% cpu 0.724 total
+Done. Now retrieving keys...
+Done.
+./lsm-test  0.39s user 0.22s system 84% cpu 0.724 total
 $ time ./lsm-lz4-test
 Inserting all keys/values (using /usr/share/dict/words)
-Done
-./lsm-lz4-test  0.28s user 0.28s system 88% cpu 0.631 total
+Done. Now retrieving keys...
+Done.
+./lsm-lz4-test  0.39s user 0.32s system 92% cpu 0.764 total
 $ du -h test.db test-lz4.db
 4.4M	test.db
 2.4M	test-lz4.db
 ```
-
-The fact things are *faster* likely means that the compression saves
-some I/O.
 
 # Join in
 
