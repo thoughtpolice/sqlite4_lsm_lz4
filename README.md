@@ -22,6 +22,7 @@ Core i5, with Ubuntu 12.10, an intel SSD, and Clang 3.3svn, I get:
 
 ```
 $ make
+...
 $ time ./lsm-test
 Inserting all keys/values (using /usr/share/dict/words)
 Done
@@ -45,23 +46,23 @@ in the GitHub [issue tracker][].
 
 Master [git repository][gh]:
 
-* `git clone https://github.com/thoughtpolice/sqlite_lsm_lz4.git`
+* `git clone https://github.com/thoughtpolice/sqlite4_lsm_lz4.git`
 
 There's also a [BitBucket mirror][bb]:
 
-* `git clone https://bitbucket.org/thoughtpolice/sqlite_lsm_lz4.git`
+* `git clone https://bitbucket.org/thoughtpolice/sqlite4_lsm_lz4.git`
 
 # Authors
 
-See [AUTHORS.txt](https://raw.github.com/thoughtpolice/sqlite_lsm_lz4/master/AUTHORS.txt).
+See [AUTHORS.txt](https://raw.github.com/thoughtpolice/sqlite4_lsm_lz4/master/AUTHORS.txt).
 
 # License
 
 MIT. See
-[LICENSE.txt](https://raw.github.com/thoughtpolice/sqlite_lsm_lz4/master/LICENSE.txt)
+[LICENSE.txt](https://raw.github.com/thoughtpolice/sqlite4_lsm_lz4/master/LICENSE.txt)
 for terms of copyright and redistribution.
 
-[contribute]: https://github.com/thoughtpolice/sqlite_lsm_lz4/blob/master/CONTRIBUTING.md
-[issue tracker]: http://github.com/thoughtpolice/sqlite_lsm_lz4/issues
-[gh]: http://github.com/thoughtpolice/sqlite_lsm_lz4
-[bb]: http://bitbucket.org/thoughtpolice/sqlite_lsm_lz4
+[contribute]: https://github.com/thoughtpolice/sqlite4_lsm_lz4/blob/master/CONTRIBUTING.md
+[issue tracker]: http://github.com/thoughtpolice/sqlite4_lsm_lz4/issues
+[gh]: http://github.com/thoughtpolice/sqlite4_lsm_lz4
+[bb]: http://bitbucket.org/thoughtpolice/sqlite4_lsm_lz4
